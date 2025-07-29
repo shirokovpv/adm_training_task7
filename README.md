@@ -30,14 +30,14 @@
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">2) Попасть в систему без пароля несколькими способами</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Способ 1. init=/bin/bash</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">В меню загрузчика нажимаем 'e' (edit)</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">В строке параметров загрузки ядра добавляем init=/bin/bash (запуск командной строки). Нажимаем сtrl-x или F10 для загрузки в систему</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Система установлена с использованием LVM (условие задания). В строке параметров загрузки ядра добавляем init=/bin/bash (запуск командной строки). Нажимаем сtrl-x или F10 для загрузки в систему</span></p>
 <img width="624" height="451" alt="image" src="https://github.com/user-attachments/assets/97e3c232-132d-4d8c-a804-65f8a5aa17ab" />
 <p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Перемонтируем файловую систему в режим Read-Write:</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">mount -o remount,rw /</span></p>
 <img width="723" height="440" alt="image" src="https://github.com/user-attachments/assets/cdb82797-5c9a-46ce-a49c-232c5c55d67a" />
 <p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Видим, что файловая система доступна для записи. Система установлена с использованием LVM (условие задания).</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Видим, что файловая система доступна для записи.</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Способ 2. Recovery mode</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
