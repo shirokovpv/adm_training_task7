@@ -40,11 +40,29 @@
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Видим, что файловая система доступна для записи.</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Способ 2. Recovery mode</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">В меню загрузчика на первом уровне выберем второй пункт (Advanced options…), далее загрузим пункт меню с указанием recovery mode в названии:</span></p>
-
+<img width="620" height="221" alt="image" src="https://github.com/user-attachments/assets/c6a8b7db-1c1c-4323-a477-4f70b9fe3956" />
+<img width="620" height="221" alt="image" src="https://github.com/user-attachments/assets/6008475c-fc33-4d0c-8761-a68eeb465928" />
 <p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">включаем поддержку сети (network):</span></p>
+<img width="657" height="290" alt="image" src="https://github.com/user-attachments/assets/2a2dcba4-5edd-4cc5-b43d-a1afee4a95a3" />
+<p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Далее выбираем пункт root, вводим пароль и попадаем в консоль:</span></p>
+<img width="694" height="403" alt="image" src="https://github.com/user-attachments/assets/79ef56af-215d-41fa-8272-2e52184fb7c2" />
+<p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">3) Установить систему с LVM, после чего переименовать VG</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">У нас установлена система с использованием LVM. </span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Посмотрим текущее состояние системы:</span></p>
+<p>root@training:~# vgs<br /> VG #PV #LV #SN Attr VSize VFree<br /> ubuntu-vg 1 1 0 wz--n- &lt;23,00g 0 <br />root@training:~# </p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">VG называется ubuntu-vg. Переименуем ее:</span></p>
+<p>root@training:~# vgrename ubuntu-vg ubuntu-training<br /> Volume group "ubuntu-vg" successfully renamed to "ubuntu-training"<br />root@training:~#</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Далее в /boot/grub/grub.cfg меняем старое название VG на новое:</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">root@training:~# nano /boot/grub/grub.cfg</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Нажимаем Ctrl+\ (замена) и меняем ubuntu--vg на ubuntu--training</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Произведено 3 замены:</span></p>
+<img width="807" height="184" alt="image" src="https://github.com/user-attachments/assets/de013450-8103-42ab-b597-0b40e162de41" />
+<p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Перезагружаем систему и проверяем:</span></p>
+<p>root@training:~# vgs<br /> VG #PV #LV #SN Attr VSize VFree<br /> ubuntu-training 1 1 0 wz--n- &lt;23,00g 0 <br />root@training:~#</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">VG успешно переименована.</span></p>
+<p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Задание завершено.</span></p>
