@@ -39,7 +39,9 @@
 <p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Видим, что файловая система доступна для записи.</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">Способ 2. Recovery mode</span></p>
-<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
+<p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">В меню загрузчика на первом уровне выберем второй пункт (Advanced options…), далее загрузим пункт меню с указанием recovery mode в названии:</span></p>
+
+<p style="line-height: 100%; margin-bottom: 0cm;">&nbsp;</p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
 <p style="line-height: 108%; margin-bottom: 0.28cm;" align="justify"><span style="font-family: Roboto, serif;">ТЕКСТ</span></p>
